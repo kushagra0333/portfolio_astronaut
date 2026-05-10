@@ -1,13 +1,52 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss";
+
+@theme {
+  --color-galaxy-dark: #000000;
+  --color-galaxy-blue: #111111;
+  --color-galaxy-purple: #222222;
+  --color-neon-blue: #ffffff;
+  --color-neon-purple: #aaaaaa;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9ca3af;
+
+  --font-sans: 'Inter', 'Outfit', system-ui, sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s infinite alternate;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  body {
+    @apply bg-black text-white overflow-x-hidden antialiased font-sans;
+    background-image: radial-gradient(circle at 50% 0%, #111111 0%, transparent 50%), radial-gradient(circle at 100% 100%, #0a0a0a 0%, transparent 50%);
+    background-color: #000000;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-white;
+  }
+}
+
+@layer utilities {
+  .glow-border {
+    @apply border border-white/5 hover:border-white/20 transition-all duration-300;
+  }
+  .glow-text {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  .glassmorphism {
+    @apply bg-white/[0.02] backdrop-blur-md border border-white/[0.05];
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 10px rgba(255,255,255,0.4); }
+  100% { box-shadow: 0 0 25px rgba(255,255,255,0.8); }
 }
