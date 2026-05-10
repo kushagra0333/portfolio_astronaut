@@ -51,7 +51,7 @@ const Experience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-[#050505] p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300"
+                className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white/[0.03] backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-2">
                   <h3 className="font-bold text-white text-lg">{exp.role}</h3>

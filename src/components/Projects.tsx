@@ -55,7 +55,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col group hover:border-white/30 transition-all duration-300"
+              className="bg-white/[0.03] backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden flex flex-col group hover:border-white/30 transition-all duration-300"
             >
               <div className="w-full h-48 overflow-hidden relative">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
@@ -66,7 +66,7 @@ const Projects = () => {
                 />
               </div>
               
-              <div className="flex flex-col p-6 flex-grow bg-gradient-to-b from-[#0a0a0a] to-black">
+              <div className="flex flex-col p-6 flex-grow bg-white/[0.02]">
                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4 flex-grow">
                   {project.description}
@@ -80,7 +80,7 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-10">
-          <button className="px-8 py-4 rounded-full bg-[#0a0a0a] border border-white/10 text-white text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+          <button className="px-8 py-4 rounded-full bg-white/[0.05] backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
             VIEW ALL PROJECTS
           </button>
         </div>
